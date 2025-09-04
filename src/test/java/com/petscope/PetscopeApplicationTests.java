@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.petscope;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class PetscopeApplicationTests {
 
 	@Test
 	void contextLoads() {

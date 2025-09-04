@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/petscope?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: petscope
+    password: petscope_pw
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+server:
+  port: 8080
+
+app:
+  jwt:
+    secret: "change-this-to-very-long-random-secret-please-change"
+    expiry-seconds: 86400  # 1 day
+
+
+MySQL DB 먼저 만들어둬:
+  CREATE DATABASE petscope;
+  CREATE USER 'petscope'@'%' IDENTIFIED BY 'petscope_pw';
+  GRANT ALL PRIVILEGES ON petscope.* TO 'petscope'@'%'; FLUSH PRIVILEGES;

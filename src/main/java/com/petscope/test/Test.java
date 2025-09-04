@@ -1,4 +1,4 @@
-package com.example.demo.test;
+package com.petscope.test;
 
 
 public class Test {
